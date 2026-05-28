@@ -35,20 +35,21 @@ The schema follows a **star-schema-inspired** layout optimized for analytical re
 │ agent_name       │   │   │ category_name        │◄──┐
 │ tier             │   │   │ department_target    │   │
 └──────────────────┘   │   └──────────────────────┘   │
-│                              │
-┌─────┴──────────────────────────────┴──┐
-│           fact_tickets                  │
-├────────────────────────────────────────┤
-│ ticket_id    (PK)                      │
-│ created_at   TIMESTAMP                 │
-│ resolved_at  TIMESTAMP (nullable)      │
-│ severity     Low|Medium|High|Critical  │
-│ status       Open|In Progress|...      │
-│ agent_id     (FK → dim_agents)         │
-│ category_id  (FK → dim_categories)     │
-│ branch_id    INT                       │
-│ sla_met      BOOLEAN                   │
-└────────────────────────────────────────┘
+                       │                              │
+                       ▼                              ▼
+            ┌─────────────────────────────────────────┐
+            │           fact_tickets                  │
+            ├─────────────────────────────────────────┤
+            │ ticket_id    (PK)                       │
+            │ created_at   TIMESTAMP                  │
+            │ resolved_at  TIMESTAMP (nullable)       │
+            │ severity     Low|Medium|High|Critical   │
+            │ status       Open|In Progress|...       │
+            │ agent_id     (FK → dim_agents)          │
+            │ category_id  (FK → dim_categories)      │
+            │ branch_id    INT                        │
+            │ sla_met      BOOLEAN                    │
+            └─────────────────────────────────────────┘
 
 ```
 

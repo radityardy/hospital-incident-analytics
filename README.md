@@ -98,6 +98,7 @@ Here are the key insights extracted from the `analytics_queries.sql` execution:
 * **Objective:** Track month-over-month volume changes and identify the dominant bottleneck category.
 * **SQL Techniques Used:** `EXTRACT()`, Window Functions (`ROW_NUMBER()`, `PARTITION BY`).
 * **Sample Output & Insight:**
+
 | Month | Total Tickets | Top Incident Category | Category Volume |
 | --- | --- | --- | --- |
 | 2026-01 | 142 | Network Outage | 58 |
@@ -111,6 +112,7 @@ Here are the key insights extracted from the `analytics_queries.sql` execution:
 * **Objective:** Surface specific branches falling below the **99% SLA target** using a running metric.
 * **SQL Techniques Used:** Aggregate Functions, Conditional Filtering (`CASE WHEN`).
 * **Sample Output & Insight:**
+
 | Branch ID | Total Tickets | SLA Met | Actual SLA % | Status |
 | --- | --- | --- | --- | --- |
 | Branch_01 | 210 | 208 | 99.04% | ✅ Target Met |
@@ -124,6 +126,7 @@ Here are the key insights extracted from the `analytics_queries.sql` execution:
 * **Objective:** Benchmark individual agent performance against the team average to find bottlenecks.
 * **SQL Techniques Used:** CTEs, Window Functions, Interval Math (`AGE()`).
 * **Sample Output & Insight:**
+
 | Agent Name | Avg Resolution Time (Hours) | Team Avg (Hours) | Performance Delta |
 | --- | --- | --- | --- |
 | Alex Subianto | 2.4 Hours | 4.8 Hours | -50.0% (Fast) |

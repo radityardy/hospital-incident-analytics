@@ -5,6 +5,12 @@
 
 ---
 
+## 🖥️ Interactive Dashboard Preview (Power BI)
+
+Below is the interactive dashboard designed to visualize the enterprise IT service desk metrics, built using Power BI:
+
+![Power BI Dashboard Preview](image.png)
+
 ## 📋 Project Overview
 
 This project simulates a **multi-branch enterprise IT helpdesk** environment (inspired by multi-site healthcare operations) with realistic incident ticket data. It provides a complete production-grade pipeline from schema design → synthetic data generation → advanced SQL analytics.

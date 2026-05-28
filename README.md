@@ -66,7 +66,7 @@ The schema follows a **star-schema-inspired** layout optimized for analytical re
 Clone this repository, navigate to the root directory, and execute the data generator:
 
 ```bash
-git clone [https://github.com/radityardy/hospital-incident-analytics.git](https://github.com/radityardy/hospital-incident-analytics.git)
+git clone https://github.com/radityardy/hospital-incident-analytics.git
 cd hospital-incident-analytics
 python generate_data.py
 
